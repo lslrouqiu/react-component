@@ -1,0 +1,103 @@
+.carousel-container{
+  position: relative;
+  &:hover{
+    .carousel-btn{
+      display: block;
+    }
+  }
+}
+
+.carousel-main{
+  overflow: hidden;
+}
+.carousel-item{
+  float: left;
+}
+.carousel-content{
+  transition: transform 1s;
+}
+.carousel-btn{
+  display: none;
+  position: absolute;
+  top: 50%;
+  margin-top: -19px;
+  width: 38px;
+  height: 38px;
+  background-image: url('https://i.h2.pdim.gs/29e3c5fbb3e0f71f9b66733c3d0408f0.png');
+  &.left{
+    left: 0;
+    cursor: pointer;
+    background-position: -10px -10px;
+    &.disabled{
+      background-position: -10px -126px;
+      cursor: default;
+      &:hover{
+        background-position: -10px -126px;
+      }
+    }
+    &:hover{
+      background-position: -10px -68px;
+    }
+  }
+  &.right{
+    right: 0;
+    cursor: pointer;
+    background-position: -10px -184px;
+    &.disabled{
+      cursor: default;
+      background-position: -10px -300px;
+      &:hover{
+        background-position: -10px -300px;
+      }
+    }
+    &:hover{
+      background-position: -10px -242px;
+    }
+  }
+  &.top{
+    left: 50%;
+    top: 0;
+    margin-left: -19px;
+    margin-top: 0;
+    transform: rotate(90deg);
+  }
+  &.bottom{
+    top: auto;
+    left: 50%;
+    bottom: 0;
+    margin-left: -19px;
+    margin-top: 0;
+    transform: rotate(90deg);
+  }
+}
+.carousel-dot-group{
+  text-align: center;
+  top: -25px;
+  position: relative;
+  &.vertical{
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .carousel-dot {
+      height: 30px;
+      width: 5px;
+      margin: 3px 10px;
+    }
+  }
+}
+.carousel-dot {
+  display: inline-block;
+  width: 30px;
+  height: 5px;
+  background: #d4d0d0;
+  margin: 0 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  &.active{
+    background: #8e8c8c;
+  }
+}

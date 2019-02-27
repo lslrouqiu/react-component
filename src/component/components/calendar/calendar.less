@@ -1,0 +1,33 @@
+.calendar-container {
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+}
+.calendar-top-controller {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #d6d6d6;
+  div{
+    cursor: pointer;
+  }
+}
+.calendar-main-title{
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+.calendar-main-date{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.calendar-main-date-item{
+  width: 100%/7;
+  text-align: center;
+  &.disabled{
+    color: #d6d6d6;
+  }
+  &.active{
+    background: #7bbfc9;
+    color: #fff;
+  }
+}
